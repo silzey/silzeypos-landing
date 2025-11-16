@@ -1,0 +1,26 @@
+{
+  "interface-design": {
+    "src": "https://picsum.photos/seed/interface/1200/675",
+    "width": 1200,
+    "height": 675,
+    "hint": "interface design"
+  },
+  "hardware-bundle": {
+    "src": "https://picsum.photos/seed/hardware/600/600",
+    "width": 600,
+    "height": 600,
+    "hint": "computer hardware"
+  },
+  "blog-post-header": {
+    "src": "https://picsum.photos/seed/blog-header/1200/675",
+    "width": 1200,
+    "height": 675,
+    "hint": "feature illustration"
+  },
+  "blog-post-og": {
+    "src": "https://picsum.photos/seed/blog-og/1200/630",
+    "width": 1200,
+    "height": 630,
+    "hint": "feature thumbnail"
+  }
+}

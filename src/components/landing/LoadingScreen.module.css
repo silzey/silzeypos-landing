@@ -1,0 +1,30 @@
+.loadingContainer {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  background-color: transparent;
+}
+
+.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cardContainer {
+  transform: scale(0.5);
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 80vw;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+}
+
+.cardZoomIn {
+  transform: scale(1);
+  opacity: 1;
+}

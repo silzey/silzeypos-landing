@@ -1,0 +1,309 @@
+
+{
+  "entities": {
+    "DemoRequest": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "DemoRequest",
+      "type": "object",
+      "description": "Represents a request for a demo of the SilzeyPOS system.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the demo request."
+        },
+        "fullName": {
+          "type": "string",
+          "description": "The full name of the person requesting the demo."
+        },
+        "emailAddress": {
+          "type": "string",
+          "description": "The email address of the person requesting the demo.",
+          "format": "email"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "The phone number of the person requesting the demo."
+        },
+        "businessDescription": {
+          "type": "string",
+          "description": "A description of the business requesting the demo."
+        },
+        "requestDate": {
+          "type": "string",
+          "description": "The date and time when the demo request was submitted.",
+          "format": "date-time"
+        },
+        "status": {
+            "type": "string",
+            "description": "The status of the demo request.",
+            "enum": ["new", "read"]
+        }
+      },
+      "required": [
+        "id",
+        "fullName",
+        "emailAddress",
+        "phoneNumber",
+        "businessDescription",
+        "requestDate",
+        "status"
+      ]
+    },
+    "UserAccount": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserAccount",
+      "type": "object",
+      "description": "Represents a user account within the SilzeyPOS landing page application.  Note: This entity does NOT store authentication credentials.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user account."
+        },
+        "email": {
+          "type": "string",
+          "description": "The user's email address.",
+          "format": "email"
+        },
+        "firstName": {
+          "type": "string",
+          "description": "The user's first name."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "The user's last name."
+        },
+        "signUpDate": {
+          "type": "string",
+          "description": "The date and time when the user signed up.",
+          "format": "date-time"
+        },
+        "lastLogin": {
+            "type": "string",
+            "description": "The date and time of the user's last login.",
+            "format": "date-time"
+        },
+        "photoURL": {
+            "type": "string",
+            "description": "The URL of the user's profile picture.",
+            "format": "uri"
+        },
+        "membershipTier": {
+          "type": "string",
+          "description": "The user's current membership tier.",
+          "enum": ["Free", "Silver", "Gold", "Platinum", "Diamond"],
+          "default": "Gold"
+        },
+        "loyaltyPoints": {
+            "type": "number",
+            "description": "The user's current loyalty points.",
+            "default": 1750
+        },
+        "accountStatus": {
+            "type": "string",
+            "description": "The current status of the user's account.",
+            "enum": ["active", "suspended", "pending"],
+            "default": "active"
+        },
+        "totalRevenue": {
+            "type": "number",
+            "description": "Total revenue associated with this user account.",
+            "default": 25480
+        },
+        "monthlyExpenses": {
+            "type": "number",
+            "description": "Total monthly expenses associated with this user account.",
+            "default": 12345
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "firstName",
+        "lastName",
+        "signUpDate",
+        "membershipTier",
+        "loyaltyPoints",
+        "accountStatus"
+      ]
+    },
+    "BlogPost": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "BlogPost",
+      "type": "object",
+      "description": "Represents a blog post on the SilzeyPOS website.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the blog post."
+        },
+        "authorId": {
+          "type": "string",
+          "description": "Reference to UserAccount. (Relationship: UserAccount 1:N BlogPost).  The author of the blog post."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the blog post."
+        },
+        "content": {
+          "type": "string",
+          "description": "The content of the blog post (e.g., HTML or Markdown)."
+        },
+        "publicationDate": {
+          "type": "string",
+          "description": "The date and time when the blog post was published.",
+          "format": "date-time"
+        },
+        "imageUrl": {
+            "type": "string",
+            "description": "URL of the main image for the blog post."
+        },
+        "imageAiHint": {
+            "type": "string",
+            "description": "AI hint for the blog post's main image."
+        },
+        "videoUrl": {
+            "type": "string",
+            "description": "URL of the main video for the blog post."
+        }
+      },
+      "required": [
+        "id",
+        "authorId",
+        "title",
+        "content",
+        "publicationDate"
+      ]
+    },
+    "Project": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Project",
+      "type": "object",
+      "description": "Represents a client project.",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "status": { "type": "string", "enum": ["Planning", "In Progress", "Review", "Completed", "On Hold"] },
+        "progress": { "type": "number", "minimum": 0, "maximum": 100 },
+        "dueDate": { "type": "string", "format": "date" }
+      },
+      "required": ["id", "name", "status", "progress", "dueDate"]
+    },
+    "Invoice": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Invoice",
+      "type": "object",
+      "description": "Represents a billing invoice.",
+      "properties": {
+        "id": { "type": "string" },
+        "amount": { "type": "number" },
+        "dueDate": { "type": "string", "format": "date" },
+        "status": { "type": "string", "enum": ["Paid", "Due", "Overdue"] }
+      },
+      "required": ["id", "amount", "dueDate", "status"]
+    },
+    "Donation": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Donation",
+      "type": "object",
+      "description": "Represents a user donation.",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "amount": { "type": "number" },
+        "date": { "type": "string", "format": "date-time" },
+        "frequency": { "type": "string", "enum": ["one-time", "monthly"] }
+      },
+      "required": ["id", "userId", "amount", "date", "frequency"]
+    },
+    "Notification": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Notification",
+      "type": "object",
+      "description": "Represents a notification sent to users.",
+      "properties": {
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "type": { "type": "string", "enum": ["info", "alert", "reminder"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "senderId": { "type": "string" },
+        "recipientId": { "type": "string" },
+        "read": { "type": "boolean" }
+      },
+      "required": ["title", "message", "type", "createdAt", "senderId", "recipientId", "read"]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous",
+      "google.com"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "UserAccount",
+          "schema": {
+            "$ref": "#/entities/UserAccount"
+          },
+          "description": "Stores user account information. Path-based ownership ensures that only the user can access their own document."
+        }
+      },
+      {
+        "path": "/users/{userId}/projects/{projectId}",
+        "definition": {
+          "entityName": "Project",
+          "schema": { "$ref": "#/entities/Project" },
+          "description": "Stores client projects as a subcollection of a user."
+        }
+      },
+      {
+        "path": "/users/{userId}/invoices/{invoiceId}",
+        "definition": {
+          "entityName": "Invoice",
+          "schema": { "$ref": "#/entities/Invoice" },
+          "description": "Stores billing invoices as a subcollection of a user."
+        }
+      },
+      {
+        "path": "/blog_posts/{blogPostId}",
+        "definition": {
+          "entityName": "BlogPost",
+          "schema": {
+            "$ref": "#/entities/BlogPost"
+          },
+          "description": "Stores blog posts. The `authorId` field is used to associate the blog post with a specific user."
+        }
+      },
+      {
+        "path": "/demo_requests/{demoRequestId}",
+        "definition": {
+          "entityName": "DemoRequest",
+          "schema": {
+            "$ref": "#/entities/DemoRequest"
+          },
+          "description": "Stores demo requests submitted by users."
+        }
+      },
+      {
+        "path": "/donations/{donationId}",
+        "definition": {
+          "entityName": "Donation",
+          "schema": { "$ref": "#/entities/Donation" },
+          "description": "Stores user donations."
+        }
+      },
+      {
+        "path": "/notifications/{notificationId}",
+        "definition": {
+          "entityName": "Notification",
+          "schema": { "$ref": "#/entities/Notification" },
+          "description": "Stores notifications sent to users."
+        }
+      }
+    ]
+  }
+}
+    
