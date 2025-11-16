@@ -1,0 +1,19 @@
+{
+  "node": {
+    "40aaa3c7d1329aa4001f54e0b3fa4c9cbfba93e9ba": {
+      "workers": {
+        "app/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fuser%2Fstudio%2Fsrc%2Fapp%2Factions%2Fpersonalize-demo-flow.ts%22%2C%5B%7B%22id%22%3A%2240aaa3c7d1329aa4001f54e0b3fa4c9cbfba93e9ba%22%2C%22exportedName%22%3A%22personalizeDemoRequest%22%2C%22filename%22%3A%22app%2Factions%2Fpersonalize-demo-flow.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "filename": "app/actions/personalize-demo-flow.ts",
+      "exportedName": "personalizeDemoRequest"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "90LJfsXx9gjA5GvzPHkpFo5glaZC8YcRlpbrjRwM500="
+}

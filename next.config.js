@@ -3,6 +3,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   /* config options here */
+  distDir: 'hosting',
   typescript: {
     ignoreBuildErrors: true,
   },
