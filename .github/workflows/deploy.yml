@@ -24,6 +24,9 @@ jobs:
       - name: Build application
         run: npm run build
 
+      - name: Remove .firebase directory to prevent large file errors
+        run: rm -rf .firebase
+
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
