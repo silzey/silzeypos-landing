@@ -1,0 +1,101 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/landing/SilzeyPOSCard.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************/
+.SilzeyPOSCard_cardContainer__l2oqE {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.SilzeyPOSCard_card___cjc5 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, hsl(var(--primary)), hsl(var(--accent)));
+  border-radius: clamp(1.25rem, 3vw, 2.5rem);
+  color: var(--primary-foreground);
+  box-shadow: 0 2.2rem 5rem rgba(0, 0, 0, 0.55);
+  padding: clamp(1.5rem, 5vw, 3.75rem);
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  overflow: hidden;
+}
+
+.SilzeyPOSCard_brandContainer__nyxHJ {
+  position: absolute;
+  top: clamp(1.5rem, 5vw, 3rem);
+  right: clamp(1.5rem, 5vw, 3.75rem);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.SilzeyPOSCard_leafIcon__YAyax {
+  width: clamp(1.5rem, 4vw, 2.2rem);
+  height: clamp(1.5rem, 4vw, 2.2rem);
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
+}
+
+.SilzeyPOSCard_brand__5LHrZ {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: bold;
+  background: linear-gradient(to right, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.SilzeyPOSCard_chip___7EH_ {
+  width: clamp(3rem, 6vw, 4.375rem);
+  height: clamp(2.2rem, 4.5vw, 3.125rem);
+  background: linear-gradient(145deg, #d4af37, #ffd700);
+  border-radius: clamp(0.375rem, 1vw, 0.625rem);
+  box-shadow: inset 2px 2px 5px rgba(255,255,255,0.3), inset -2px -2px 5px rgba(0,0,0,0.2);
+  align-self: flex-start;
+}
+
+.SilzeyPOSCard_number__iFAmG {
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  letter-spacing: clamp(0.1rem, 0.4vw, 0.25rem);
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  white-space: nowrap;
+}
+
+.SilzeyPOSCard_typingCursor__vIOGK {
+  animation: SilzeyPOSCard_blink__4z_4A 1s step-start infinite;
+  font-weight: 100;
+  margin-left: 2px;
+}
+
+@keyframes SilzeyPOSCard_blink__4z_4A {
+  50% {
+    opacity: 0;
+  }
+}
+
+.SilzeyPOSCard_cardInfo__FX7vQ {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.SilzeyPOSCard_name__VzwIX {
+  font-size: clamp(0.875rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.SilzeyPOSCard_expiry__baed3 {
+  font-size: clamp(0.875rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  text-align: right;
+  line-height: 1.2;
+}
+

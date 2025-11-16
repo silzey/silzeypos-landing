@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"components/landing/HeroSection.tsx -> ./SilzeyPOSCard\":{\"id\":\"components/landing/HeroSection.tsx -> ./SilzeyPOSCard\",\"files\":[\"static/css/_app-pages-browser_src_components_landing_SilzeyPOSCard_tsx.css\",\"static/chunks/_app-pages-browser_src_components_landing_SilzeyPOSCard_tsx.js\"]}}"
